@@ -1,0 +1,13 @@
+{% extends "main/base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.anons }}
+        {{ form.text }}
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+
+{% endblock %}
